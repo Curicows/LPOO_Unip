@@ -11,4 +11,14 @@ package models;
  */
 public class Moto extends Veiculo {
     
+    @Override
+    public void acelerar() {
+        System.out.println("VRUUUUMMMM!!");
+    }
+
+    @Override
+    public void buzinar() {
+        System.out.println("BIBI");
+    }
+    
 }

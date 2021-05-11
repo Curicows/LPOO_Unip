@@ -10,5 +10,22 @@ package models;
  * @author giova
  */
 public class Automovel extends Veiculo {
+
+    
+    public Automovel(String marca, String modelo, String placa) {
+        super(marca,modelo,placa);
+    }
+    
+    @Override
+    public void acelerar() {
+        System.out.println("VRUUUUMMMM!!");
+    }
+
+    @Override
+    public void buzinar() {
+        System.out.println("BIBI");
+    }
+    
+    
     
 }
