@@ -18,6 +18,8 @@ public class LPOO_Unip {
         teste[0].acelerar();
         System.out.println("adasdas");
         System.out.println("jfhodigsdif");
+        Menu menu = new Menu();
+        menu.principal();
     }
     
 }

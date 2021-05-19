@@ -5,9 +5,6 @@
  */
 package models;
 
-import java.util.HashSet;
-import java.util.Set;
-
 /**
  *
  * @author giova
@@ -17,12 +14,14 @@ public abstract class Veiculo {
     private String marca;
     private String modelo;
     private String placa;
+    private String tipo;
     
     
-    public Veiculo(String marca, String modelo, String placa) {
+    public Veiculo(String marca, String modelo, String placa, String tipo) {
         this.setMarca(marca);
         this.setModelo(modelo);
         this.setPlaca(placa);
+        this.setTipo(tipo);
     }
     
     
@@ -31,7 +30,7 @@ public abstract class Veiculo {
     
     
     public String getMarca() {
-        return marca;
+        return this.marca;
     }
 
     public void setMarca(String marca) {
@@ -39,7 +38,7 @@ public abstract class Veiculo {
     }
 
     public String getModelo() {
-        return modelo;
+        return this.modelo;
     }
 
     public void setModelo(String modelo) {
@@ -47,13 +46,19 @@ public abstract class Veiculo {
     }
 
     public String getPlaca() {
-        return placa;
+        return this.placa;
     }
 
     public void setPlaca(String placa) {
         this.placa = placa;
     }
     
-    
+    public String getTipo() {
+        return this.tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
     
 }

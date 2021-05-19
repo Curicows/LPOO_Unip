@@ -5,6 +5,8 @@
  */
 package models;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author giova
@@ -13,6 +15,7 @@ public class Motorista {
     
     private String nome;
     private int idade;
+    private ArrayList<Veiculo> veiculos = new ArrayList<Veiculo>();
     
     public Motorista(String nome, int idade) {
         this.setIdade(idade);
@@ -33,6 +36,14 @@ public class Motorista {
 
     public void setIdade(int idade) {
         this.idade = idade;
+    }
+
+    public ArrayList<Veiculo> addVeiculos() {
+        return veiculos;
+    }
+
+    public void addVeiculos(Veiculo veiculos) {
+        this.veiculos.add(veiculos);
     }
     
 }

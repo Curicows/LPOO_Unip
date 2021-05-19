@@ -11,9 +11,8 @@ package models;
  */
 public class Automovel extends Veiculo {
 
-    
     public Automovel(String marca, String modelo, String placa) {
-        super(marca,modelo,placa);
+        super(marca,modelo,placa,"automovel");
     }
     
     @Override

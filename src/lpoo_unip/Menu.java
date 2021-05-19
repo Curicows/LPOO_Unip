@@ -5,61 +5,33 @@
  */
 package lpoo_unip;
 
-import java.util.Scanner;
-import models.Veiculo;
-import models.Automovel;
-import models.Moto;
-import models.Caminhao;
-import models.Multa;
-import models.Motorista;
 
 /**
  *
  * @author giova
  */
-public class Menu {
-    
-    Scanner sca;
+public class Menu extends MenuBase {
 
-    public Menu() {
-        this.sca = new Scanner(System.in);
-    }
-    
     public void principal() {
-        System.out.println("");
-        System.out.flush();
-        sca.nextLine();
-    }
-    
-    public void novoVeiculo() {
-        Veiculo veiculo = null;
-        System.out.println("Novo veiculo: ");
-        System.out.println("1- Automovel");
-        System.out.println("2- Moto");
-        System.out.println("3- Caminhão");
-        int escolhido = this.getSca().nextInt();
+        System.out.println("============================");
+        System.out.println("Sistema de controle");
+        System.out.println("\n");
+        System.out.println("1- Listagem");
+        System.out.println("2- Cadastrar");
+        System.out.println("3- Sair");
+        System.out.println("============================\n");
+        System.out.println("Digite a sua opção: ");
+        int escolhido = super.getSca().nextInt();
         if (escolhido == 1) {
-            
+            (new Listagem()).listagem();
         } else if (escolhido == 2) {
-            
+            (new Cadastro()).cadastro();
         } else if (escolhido == 3) {
-            
-        } else {
-            System.out.println("Opção invalida!");
+            System.exit(1);
         }
-        
+        this.principal();
     }
-    
-    //public
-    
-    public void novoMotorista() {
-        
-    }
-    
-    public void novaMulta() {
-        
-    }
-    
+
     public void limparTela() {
         System.out.println("");
         System.out.println("");
@@ -75,18 +47,7 @@ public class Menu {
         System.out.println("");
         System.out.println("");
     }
-    
-    
-    
+
     
 
-    public Scanner getSca() {
-        return sca;
-    }
-
-    public void setSca(Scanner sca) {
-        this.sca = sca;
-    }
-    
-    
 }

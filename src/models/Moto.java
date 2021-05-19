@@ -10,6 +10,10 @@ package models;
  * @author giova
  */
 public class Moto extends Veiculo {
+
+    public Moto(String marca, String modelo, String placa) {
+        super(marca,modelo,placa,"moto");
+    }
     
     @Override
     public void acelerar() {
